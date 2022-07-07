@@ -20,21 +20,15 @@ public class Bird : MonoBehaviour
         origColor = spriteRenderer.color;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         rigidBody2d.gravityScale = -origGravityScale;
-        spriteRenderer.color = Color.red;
+        spriteRenderer.color = Color.green;
     }
 
-    private void OnMouseUp()
+    void OnMouseUp()
     {
         rigidBody2d.gravityScale = origGravityScale;
-        spriteRenderer.color = origColor; ;
+        spriteRenderer.color = origColor;
     }
 }
